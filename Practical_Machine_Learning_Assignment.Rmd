@@ -66,7 +66,7 @@ corGraph <- cor(trainSet[, colnames(trainSet)!="classe"])
 corrplot(corGraph, order = "FPC", method = "number", type = "lower", 
          tl.cex = 0.8, tl.col = rgb(0, 0, 0),number.cex = 0.7, number.digits = 2)
 ```
-![Rplot1](/Users/user/Documents/practice/pml/Rplot1.png) 
+Plot1![Rplot 1](pml_plot/Rplot1.png) 
 
 There are several variables that are highly correlated (>0.90 or < -0.90). In order to save the calculating source, we are going to remove some of the variables.
 
@@ -154,7 +154,7 @@ plot(conf_gbm$table, col = conf_gbm$byClass,
      main = paste("Accuracy of gbm is ", round(conf_gbm$overall['Accuracy'], 4)))
 
 ```
-![Rplot2](/Users/user/Documents/practice/pml/Rplot2.png)
+Plot2![Rplot 2](pml_plot/Rplot2.png)
 
 ### This is the second modelling with the methods of "rf":
 
@@ -237,12 +237,8 @@ plot(conf_rf$table, col = conf_rf$byClass,
      main = paste("Accuracy of the random forest is ",
                   round(conf_rf$overall['Accuracy'], 4)))
 
-
-![Alt text](C:/Users/user/Documents/practice/pml/Rplot3.png)
-
-
 ```
-![Rplot3](/Users/user/Documents/practice/pml/Rplot3.png)  
+Plot3![Rplot 3](pml_plot/Rplot3.png)
 
 
 
@@ -256,7 +252,7 @@ mod_dtr <- rpart(classe ~ ., data=trainSet, method="class")
 fancyRpartPlot(mod_dtr)
 
 ```
-![Rplot4](/Users/user/Documents/practice/pml/Rplot4.png)  
+Plot4![Rplot 4](pml_plot/Rplot4.png)
 
 
 ```
@@ -312,7 +308,7 @@ plot(conf_dtr$table, col = conf_dtr$byClass,
                   round(conf_dtr$overall['Accuracy'], 4)))
 
 ```
-![Rplot5](/Users/user/Documents/practice/pml/Rplot5.png) 
+Plot5![Rplot 5](pml_plot/Rplot5.png)
 
 ### Conclusion:
 
